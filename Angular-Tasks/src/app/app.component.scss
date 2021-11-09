@@ -1,0 +1,42 @@
+.container {
+  margin: 20px;
+  width: 60vw;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 20px;
+  align-items: center;
+
+  .item {
+    flex-basis: 30%;
+  }
+
+  input {
+    min-width: 500px;
+    min-height: 35px;
+    border-radius: 5px;
+  }
+
+  .btn {
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(73, 73, 252);
+    color: white;
+  }
+  .btn-div {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 270px;
+    align-items: center;
+  }
+  .checkbox {
+    margin-left: 40px;
+  }
+
+  small {
+    color: red;
+    padding: 5px;
+  }
+}

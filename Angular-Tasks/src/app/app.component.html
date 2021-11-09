@@ -1,0 +1,74 @@
+<form [formGroup]="form" class="container">
+  <div class="item label">
+    <small *ngIf="form.get('email').invalid || form.get('email').untouched"
+      >*</small
+    >E-mail:
+  </div>
+  <div class="item input">
+    <input type="text" formControlName="email" />
+  </div>
+
+  <div class="item label">
+    <small
+      *ngIf="form.get('password').invalid || form.get('password').untouched"
+      >*</small
+    >Password:
+  </div>
+  <div class="item input">
+    <input type="password" formControlName="password" />
+  </div>
+
+  <div class="item label">
+    <small
+      *ngIf="
+        form.get('confirmPassword').value !== form.get('password').value ||
+        form.get('confirmPassword').invalid
+      "
+      >*</small
+    >Confirm Password:
+  </div>
+  <div class="item input">
+    <input type="password" formControlName="confirmPassword" />
+  </div>
+
+  <div class="item label">
+    <small
+      *ngIf="form.get('nickName').invalid || form.get('nickName').untouched"
+      >*</small
+    >NickName:
+  </div>
+  <div class="item input">
+    <input type="text" formControlName="nickName" />
+  </div>
+
+  <div class="item label">
+    <small
+      *ngIf="
+        form.get('phoneNumber').invalid || form.get('phoneNumber').untouched
+      "
+      >*</small
+    >
+    Phone Number:
+  </div>
+  <div class="item input">
+    <input type="phone" formControlName="phoneNumber" />
+  </div>
+
+  <div class="item label">
+    <small *ngIf="form.get('website').invalid || form.get('website').untouched"
+      >*</small
+    >Website:
+  </div>
+  <div class="item input">
+    <input type="text" formControlName="website" />
+  </div>
+
+  <div class="item input checkbox">
+    <input formControlName="checkBox" type="checkbox" />
+  </div>
+  <div>I have the read <a href="#">aggrement</a></div>
+
+  <div class="btn-div">
+    <button class="btn" [disabled]="onBtnDisabled()">Register</button>
+  </div>
+</form>
