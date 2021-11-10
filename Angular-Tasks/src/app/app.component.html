@@ -1,4 +1,4 @@
-<form [formGroup]="form" class="container">
+<form *ngIf="formShow" [formGroup]="form" class="container">
   <div class="item label">
     <small *ngIf="form.get('email').invalid || form.get('email').untouched"
       >*</small
@@ -72,3 +72,7 @@
     <button class="btn" [disabled]="onBtnDisabled()">Register</button>
   </div>
 </form>
+
+<button class="btn list" (click)="showList()">show List</button>
+<button class="btn list" (click)="hideList()">hide List</button>
+<app-list *ngIf="listShow"></app-list>

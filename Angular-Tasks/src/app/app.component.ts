@@ -48,4 +48,17 @@ export class AppComponent implements OnInit {
     }
     return this.btnDisabled;
   }
+
+  formShow = true;
+  listShow = false;
+
+  showList() {
+    this.listShow = true;
+    this.formShow = false;
+  }
+
+  hideList() {
+    this.listShow = false;
+    this.formShow = true;
+  }
 }
