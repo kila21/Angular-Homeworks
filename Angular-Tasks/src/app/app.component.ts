@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { OnInit } from '@angular/core';
 @Component({
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
       confirmPassword: new FormControl('', Validators.required),
       nickName: new FormControl('', [
         Validators.required,
-        Validators.pattern('([A-Za-z1-9-]{5,})'),
+        Validators.pattern('([A-Za-z0-9-]{5,})'),
       ]),
       phoneNumber: new FormControl('', [
         Validators.required,
@@ -55,10 +55,22 @@ export class AppComponent implements OnInit {
   showList() {
     this.listShow = true;
     this.formShow = false;
+    this.newUser = [];
   }
 
   hideList() {
     this.listShow = false;
     this.formShow = true;
+  }
+
+  newUser = [];
+
+  userRegister() {
+    if (this.form.valid) {
+      this.newUser.push(this.form.value);
+      this.form.reset('');
+    }
+
+    console.log(this.newUser);
   }
 }

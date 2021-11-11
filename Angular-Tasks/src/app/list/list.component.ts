@@ -6,11 +6,12 @@ import { EditUsersComponent } from './edit-users/edit-users.component';
   styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
+  @Input() newUSer = [];
   constructor() {}
 
   ngOnInit(): void {}
 
-  @Output()
+  @Input()
   userArray: Array<userList> = [
     {
       id: 1,
