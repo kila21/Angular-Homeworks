@@ -55,7 +55,6 @@ export class AppComponent implements OnInit {
   showList() {
     this.listShow = true;
     this.formShow = false;
-    this.newUser = [];
   }
 
   hideList() {
@@ -63,14 +62,12 @@ export class AppComponent implements OnInit {
     this.formShow = true;
   }
 
-  newUser = [];
-
+  user = [];
   userRegister() {
     if (this.form.valid) {
-      this.newUser.push(this.form.value);
+      this.user.push(this.form.value);
+      this.user[0].id = 4;
       this.form.reset('');
     }
-
-    console.log(this.newUser);
   }
 }

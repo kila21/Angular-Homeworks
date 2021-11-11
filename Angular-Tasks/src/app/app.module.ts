@@ -4,10 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
-import { EditUsersComponent } from './list/edit-users/edit-users.component';
 
 @NgModule({
-  declarations: [AppComponent, ListComponent, EditUsersComponent],
+  declarations: [AppComponent, ListComponent],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
