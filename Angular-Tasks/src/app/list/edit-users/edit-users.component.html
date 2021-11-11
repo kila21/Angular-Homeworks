@@ -1,0 +1,35 @@
+<h1>Person Edit!</h1>
+
+<form [formGroup]="form" class="container" autocomplete="off">
+  <div class="item label">E-mail:</div>
+  <div class="item input">
+    <input type="text" formControlName="email" />
+  </div>
+
+  <div class="item label">Password:</div>
+  <div class="item input">
+    <input type="password" formControlName="password" />
+  </div>
+
+  <div class="item label">Confirm Password:</div>
+  <div class="item input">
+    <input type="password" formControlName="confirmPassword" />
+  </div>
+
+  <div class="item label">NickName:</div>
+  <div class="item input">
+    <input type="text" formControlName="nickName" />
+  </div>
+
+  <div class="item label">Phone Number:</div>
+  <div class="item input">
+    <input type="phone" formControlName="phoneNumber" />
+  </div>
+
+  <div class="item label">Website:</div>
+  <div class="item input">
+    <input type="text" formControlName="website" />
+  </div>
+
+  <button (click)="updateUser()">Update</button>
+</form>

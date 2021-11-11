@@ -12,21 +12,33 @@
     height: auto;
     display: flex;
     align-items: center;
+
+    .item-name {
+      min-width: 70px;
+      font-size: 15px;
+      margin: 5px;
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+    }
+    .item-value {
+      min-width: 250px;
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      font-size: 15px;
+      margin-left: 15px;
+      display: flex;
+      justify-content: center;
+    }
+    .btn {
+      background-color: blueviolet;
+      color: white;
+      margin: auto;
+      width: 70px;
+      height: 30px;
+    }
   }
-  .item-name {
-    min-width: 70px;
-    font-size: 15px;
-    margin: 5px;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-  }
-  .item-value {
-    min-width: 250px;
-    border-right: 2px solid black;
-    border-bottom: 2px solid black;
-    font-size: 15px;
-    margin-left: 15px;
-    display: flex;
-    justify-content: center;
-  }
+}
+
+app-edit-users {
+  margin: auto;
 }

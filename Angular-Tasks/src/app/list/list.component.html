@@ -2,6 +2,7 @@
   <div class="item">
     <div class="item-name">E-mail</div>
     <div class="item-value">{{ user.email }}</div>
+    <button class="btn" (click)="editUser(user.id)">EDIT</button>
   </div>
 
   <div class="item">
@@ -22,5 +23,8 @@
   <div class="item">
     <div class="item-name">Website</div>
     <div class="item-value">{{ user.website }}</div>
+    <button class="btn" (click)="deleteUser(user.id)">Delete</button>
   </div>
 </div>
+
+<app-edit-users *ngIf="edit" [currentUser]="currentUser"></app-edit-users>
